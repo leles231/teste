@@ -1,0 +1,28 @@
+
+body {
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  background: #66bb6a;
+  padding: 10px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background: #388e3c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

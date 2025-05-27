@@ -1,0 +1,41 @@
+
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<nav>
+  <ul>
+    <li><a href="#projeto">Projeto</a></li>
+    <li><a href="#biodiversidade">Biodiversidade</a></li>
+    <li><a href="#teses">Teses</a></li>
+    <li><a href="#gestao">Gestão</a></li>
+    <li><a href="#denuncias">Denúncias</a></li>
+    <li><a href="#equipe">Equipe</a></li>
+  </ul>
+</nav>
+
+<section id="gestao">
+  <h2>Gestão do Campus</h2>
+  <div id="mapa"></div>
+  <button onclick="window.open('https://link-da-gestao', '_blank')">Saiba mais</button>
+</section>
+
+<section id="denuncias">
+  <h2>Denuncie</h2>
+  <form method="POST" action="/denuncia">
+    <select name="tipo">
+      <option>Limpeza</option>
+      <option>Financeira</option>
+      <option>Estrutural</option>
+    </select>
+    <textarea name="descricao" placeholder="Descreva o problema"></textarea>
+    <input type="hidden" name="latitude" id="latitude">
+    <input type="hidden" name="longitude" id="longitude">
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<canvas id="graficoDenuncias"></canvas>
+
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
+<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
+{% endblock %}
