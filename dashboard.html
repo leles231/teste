@@ -1,7 +1,4 @@
 
-{% extends "base.html" %}
-{% block title %}Dashboard{% endblock %}
-{% block content %}
 <nav>
   <ul>
     <li><a href="#projeto">Projeto</a></li>
@@ -36,6 +33,5 @@
 
 <canvas id="graficoDenuncias"></canvas>
 
-<script src="{{ url_for('static', filename='js/map.js') }}"></script>
-<script src="{{ url_for('static', filename='js/chart.js') }}"></script>
-{% endblock %}
+<script src="map.js"></script>
+<script src="chart.js"></script>
